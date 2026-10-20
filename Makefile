@@ -54,7 +54,9 @@ generate-mainnet generate-testnet: generate
 	@test -n "$(TX_FROM)" || { echo "Set TX_FROM in config/$(NETWORK).local.mk" >&2; exit 1; }
 	@test -n "$(RPC_NODE)" || { echo "Set RPC_NODE in config/$(NETWORK).local.mk" >&2; exit 1; }
 	@gaiad tx gov submit-proposal "./proposals/$(PROPOSAL_DIR)/proposal.json" --from "$(TX_FROM)" --generate-only --chain-id "$(CHAIN_ID)" | jq -e '.'
+	@printf 'To submit a proposal, please follow the steps below:\n  1. Review the proposal(is expedited, title, contents)\n  2. Execute the following commands in sequence.\n'
 	@echo 'gaiad tx gov submit-proposal "./proposals/$(PROPOSAL_DIR)/proposal.json" --from "$(TX_FROM)" --node "$(RPC_NODE)" --chain-id "$(CHAIN_ID)" --gas-prices "$(GAS_PRICES)" --gas "$(GAS)"'
+	@echo 'make deposit NETWORK=$(NETWORK) DEPOSIT_AMOUNT=450000000uatom PROPOSAL_ID=X'
 
 .PHONY: deposit
 deposit:
