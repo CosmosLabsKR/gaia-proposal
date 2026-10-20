@@ -1,5 +1,10 @@
 {
   "name": "v29.0.0",
   "height": "33618500",
-  "info": ""
+  "info": {
+    "binaries": {
+      "darwin/amd64": "https://github.com/cosmos/gaia/releases/download/v29.0.0/gaiad-v29.0.0-darwin-amd64?checksum=sha256:7a98e4c8ba06340fbeece5bffbf1e6806c45f7528900e0aebcfae8f5c192c531",
+      "linux/amd64": "https://github.com/cosmos/gaia/releases/download/v29.0.0/gaiad-v29.0.0-linux-amd64?checksum=sha256:ae1ebdc31791a6a1df63ae88741cce1ceca829efaa31c45604ba9cbc737f8be0"
+    }
+  }
 }
