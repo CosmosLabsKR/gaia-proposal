@@ -125,5 +125,5 @@ This allows us to always use the same predefined deposit command to deposit the 
 Use the same network configuration to make a deposit. This command submits an actual transaction.
 
 ```sh
-make deposit NETWORK=mainnet PROPOSAL_ID=1055 DEPOSIT_AMOUNT=450000000uatom
+make deposit NETWORK=mainnet DEPOSIT_AMOUNT=450000000uatom PROPOSAL_ID=X
 ```
