@@ -1,0 +1,20 @@
+{
+  "messages": [
+    {
+      "@type": "/cosmos.upgrade.v1beta1.MsgSoftwareUpgrade",
+      "authority": "cosmos10d07y265gmmuvt4z0w9aw880jnsr700j6zn9kn",
+      "plan": {
+        "name": "v28.2.0",
+        "time": "0001-01-01T00:00:00Z",
+        "height": "33073000",
+        "info": "",
+        "upgraded_client_state": null
+      }
+    }
+  ],
+  "metadata": "ipfs://CID",
+  "deposit": "51000000uatom",
+  "title": "Gaia v28.2.0 upgrade",
+  "summary": "# Overview\r\n\r\nThis proposal schedules a coordinated upgrade of the Cosmos Hub to Gaia `v28.2.0`.\r\n\r\n**If the proposal passes, validators will be required to update the Cosmos Hub binary at the specified upgrade height.**\r\n\r\n# Upgrade Instructions and Verification\r\n\r\nPlease check the announcements in the established communication channels for release details and upgrade instructions.\r\n\r\nStarting with this release, all official Gaia release binaries will be distributed with detached GPG signatures, either for the binaries themselves or for the archives containing them. Public verification keys and instructions are published in the [official Gaia release signing directory](https://github.com/cosmos/security/tree/main/release/gaia/signing).\r\n\r\n# Voting\r\n\r\nThis expedited proposal has an initial voting period of **THREE DAYS**.\r\n\r\nThe following items summarize the voting options and what they mean for this proposal:\r\n\r\nYES - You agree that the Cosmos Hub should be updated with this release.\r\n\r\nNO - You disagree that the Cosmos Hub should be updated with this release.\r\n\r\nNO WITH VETO - A `NoWithVeto` vote indicates that the proposal either (1) is deemed to be spam, i.e., irrelevant to Cosmos Hub, (2) disproportionately infringes on minority interests, or (3) violates or encourages violation of the rules of engagement as currently set out by Cosmos Hub governance. Veto thresholds and any deposit burning are governed by the chain's active governance parameters.\r\n\r\nABSTAIN - You wish to contribute to the quorum but formally decline to vote either for or against the proposal.",
+  "expedited": true
+}

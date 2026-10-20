@@ -1,0 +1,10 @@
+{
+  "name": "example",
+  "height": "123456789",
+  "info": {
+    "binaries": {
+      "darwin/amd64": "https://github.com/cosmos/gaia/releases/download/example/gaiad-example-darwin-amd64?checksum=sha256:1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
+      "linux/amd64": "https://github.com/cosmos/gaia/releases/download/example/gaiad-example-linux-amd64?checksum=sha256:abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890"
+    }
+  }
+}

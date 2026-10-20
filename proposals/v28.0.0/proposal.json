@@ -1,0 +1,20 @@
+{
+  "messages": [
+    {
+      "@type": "/cosmos.upgrade.v1beta1.MsgSoftwareUpgrade",
+      "authority": "cosmos10d07y265gmmuvt4z0w9aw880jnsr700j6zn9kn",
+      "plan": {
+        "name": "v28.0.0",
+        "time": "0001-01-01T00:00:00Z",
+        "height": "32785900",
+        "info": "{\"binaries\":{\"darwin/amd64\":\"https://github.com/cosmos/gaia/releases/download/v28.0.0/gaiad-v28.0.0-darwin-amd64?checksum=sha256:ca20b996768a51072377b6a75dac700aeb4d154a34d2bd17f06bc5c025f3f1ff\",\"linux/amd64\":\"https://github.com/cosmos/gaia/releases/download/v28.0.0/gaiad-v28.0.0-linux-amd64?checksum=sha256:2197a68e641b2f9abe13d1ffbc4f36f05cd5263ceee9764fa99e8be1db1fb83f\"}}",
+        "upgraded_client_state": null
+      }
+    }
+  ],
+  "metadata": "ipfs://CID",
+  "deposit": "50000000uatom",
+  "title": "test - Gaia v28.0.0 upgrade",
+  "summary": "# Background\r\n\r\nThe Gaia `v28.0.0` upgrade removes Interchain Security (ICS) from the Cosmos Hub.\r\n\r\nThe following will happen as part of this upgrade:\r\n\r\n1. The `max_validators` parameter in the staking module will be updated to match the `max_provider_consensus_validators` parameter in the provider module.\r\n2. All bonded validators that are ranked below the new `max_validator` threshold at the time of the upgrade will be set to unbonding. They will not be jailed or slashed.\r\n3. All tokens in the consumer rewards pool account will be transferred to the community pool, and the consumer rewards pool will be blocked from receiving any additional tokens.\r\n4. All pending VSCPackets will be deleted.\r\n5. All `provider` port IBC channels will be closed.\r\n\r\nThe upgrade handler will transfer the full remaining balance of the legacy `ConsumerRewardsPool` module account to the community pool. These legacy consumer-chain rewards would otherwise be lost because these are denoms that have been \"stuck\" in the consumer rewards pool account (they were never registered in a distribution allowlist). Moving them to the community pool preserves the balances, but does not distribute them to validators or delegators. Validators or other independent community members can calculate historical allocations and submit a separate governance proposal if they choose.\r\n\r\nAdditionally, any queries for ICS messages will now return empty stubs instead of historical data.\r\n\r\nIf the proposal passes, validators will be required to update the Cosmos Hub binary at the specified upgrade height.\r\n\r\n# Release Details\r\n\r\n- The release cna be found [here](https://github.com/cosmos/gaia/releases/tag/v28.0.0).\r\n- The changelog can be found [here](https://github.com/cosmos/gaia/blob/v28.0.0/CHANGELOG.md).\r\n\r\n**This upgrade is state-breaking and mandatory once the on-chain vote passes and the upgrade height is reached.**\r\n\r\n# Governance votes\r\n\r\n- This proposal has a voting period of **SEVEN DAYS**.\r\n- If the proposal passes, validators will be required to update the Cosmos Hub binary at the specified upgrade height.\r\n\r\nThe following items summarize the voting options and what it means for this proposal:\r\n\r\nYES - You agree that the Cosmos Hub should be updated with this release.\r\n\r\nNO - You disagree that the Cosmos Hub should be updated with this release.\r\n\r\nNO WITH VETO - A ‘NoWithVeto’ vote indicates a proposal either (1) is deemed to be spam, i.e., irrelevant to Cosmos Hub, (2) disproportionately infringes on minority interests, or (3) violates or encourages violation of the rules of engagement as currently set out by Cosmos Hub governance. If the number of ‘NoWithVeto’ votes is greater than a third of total votes, the proposal is rejected and the deposits are burned.\r\n\r\nABSTAIN - You wish to contribute to the quorum but you formally decline to vote either for or against the proposal.",
+  "expedited": false
+}

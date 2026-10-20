@@ -1,0 +1,20 @@
+{
+  "messages": [
+    {
+      "@type": "/cosmos.upgrade.v1beta1.MsgSoftwareUpgrade",
+      "authority": "cosmos10d07y265gmmuvt4z0w9aw880jnsr700j6zn9kn",
+      "plan": {
+        "name": "example",
+        "time": "0001-01-01T00:00:00Z",
+        "height": "123456789",
+        "info": "{\"binaries\":{\"darwin/amd64\":\"https://github.com/cosmos/gaia/releases/download/example/gaiad-example-darwin-amd64?checksum=sha256:1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef\",\"linux/amd64\":\"https://github.com/cosmos/gaia/releases/download/example/gaiad-example-linux-amd64?checksum=sha256:abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890\"}}",
+        "upgraded_client_state": null
+      }
+    }
+  ],
+  "metadata": "ipfs://CID",
+  "deposit": "50000000uatom",
+  "title": "test proposal",
+  "summary": "# Markdown Rendering Test\r\n\r\nThis document is used to verify that **Markdown content** is displayed correctly in the Explorer.\r\n\r\n## Text styles\r\n\r\n- **Bold text**\r\n- *Italic text*\r\n- ~~Strikethrough text~~\r\n- Inline code: `gaiad version`\r\n- [Cosmos Hub release page](https://github.com/cosmos/gaia/releases)\r\n\r\n\u003e This is a blockquote for checking indentation, spacing, and text styling.\r\n\r\n## Lists\r\n\r\n1. First ordered item\r\n2. Second ordered item\r\n   - Nested unordered item\r\n   - Another nested item\r\n3. Third ordered item\r\n\r\n## Code block\r\n\r\n```bash\r\ngaiad status\r\ngaiad version\r\n```\r\n\r\n## Table\r\n\r\n| Item | Expected result |\r\n| --- | --- |\r\n| Heading | Displayed with the correct hierarchy |\r\n| Link | Opens the configured URL |\r\n| Code | Uses a monospace font |\r\n\r\n---\r\n\r\nIf every section above is readable and properly aligned, the Markdown renderer is working as intended.",
+  "expedited": false
+}

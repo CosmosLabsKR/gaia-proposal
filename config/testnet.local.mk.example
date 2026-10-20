@@ -1,0 +1,4 @@
+# Copy to testnet.local.mk and fill in your local values.
+TX_FROM =
+RPC_NODE =
+# Optional overrides: CHAIN_ID, GAS_PRICES, GAS

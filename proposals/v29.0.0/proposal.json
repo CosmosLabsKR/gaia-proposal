@@ -1,0 +1,20 @@
+{
+  "messages": [
+    {
+      "@type": "/cosmos.upgrade.v1beta1.MsgSoftwareUpgrade",
+      "authority": "cosmos10d07y265gmmuvt4z0w9aw880jnsr700j6zn9kn",
+      "plan": {
+        "name": "v29.0.0",
+        "time": "0001-01-01T00:00:00Z",
+        "height": "33618000",
+        "info": "",
+        "upgraded_client_state": null
+      }
+    }
+  ],
+  "metadata": "ipfs://CID",
+  "deposit": "51000000uatom",
+  "title": "Gaia v29.0.0 upgrade",
+  "summary": "# Overview\r\n\r\nThis proposal schedules a coordinated upgrade of the Cosmos Hub to Gaia `v29.0.0`.\r\n\r\n**If the proposal passes, validators will be required to update the Cosmos Hub binary at the specified upgrade height.**\r\n\r\n**This upgrade is state-breaking.**\r\n\r\n## Highlights\r\n\r\n- Remove the `x/params` module.\r\n- Update the Cosmos SDK from `v0.53.4` to `v0.53.8`.\r\n- Update Go from `1.25` to `1.26`.\r\n\r\n### Breaking Changes\r\n\r\n- The legacy `ParameterChangeProposal` governance route and the `cosmos.params.v1beta1.Query` service are no longer available following the removal of `x/params`.\r\n\r\n### Known Issues\r\n\r\n- In Cosmos SDK `v0.53.8`, gas simulation with `--gas auto` is broken for multisig senders. Multisig transactions must specify a fixed `--gas` value until the issue is fixed upstream.\r\n\r\n## Release Details\r\n\r\n- [Gaia v29.0.0 release](https://github.com/cosmos/gaia/releases#release-v29.0.0)\r\n- [Changelog](https://github.com/cosmos/gaia/blob/main/CHANGELOG.md)\r\n\r\n# Upgrade Instructions and Verification\r\n\r\nPlease check the announcements in the established communication channels for release details and upgrade instructions.\r\n\r\nPublic verification keys and instructions for verifying Gaia release signatures are available in the [official Gaia release signing directory](https://github.com/cosmos/security/tree/main/release/gaia/signing).\r\n\r\n# Voting\r\n\r\nThis expedited proposal has an initial voting period of **THREE DAYS**.\r\n\r\nThe following items summarize the voting options and what they mean for this proposal:\r\n\r\nYES - You agree that the Cosmos Hub should be updated with this release.\r\n\r\nNO - You disagree that the Cosmos Hub should be updated with this release.\r\n\r\nNO WITH VETO - A `NoWithVeto` vote indicates that the proposal either (1) is deemed to be spam, i.e., irrelevant to Cosmos Hub, (2) disproportionately infringes on minority interests, or (3) violates or encourages violation of the rules of engagement as currently set out by Cosmos Hub governance. Veto thresholds and any deposit burning are governed by the chain's active governance parameters.\r\n\r\nABSTAIN - You wish to contribute to the quorum but formally decline to vote either for or against the proposal.",
+  "expedited": false
+}

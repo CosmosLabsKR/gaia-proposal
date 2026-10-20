@@ -1,0 +1,5 @@
+.DS_Store
+/bin/
+
+# Private network endpoints and signing accounts
+/config/*.local.mk
