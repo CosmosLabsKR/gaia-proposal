@@ -1,0 +1,20 @@
+{
+  "messages": [
+    {
+      "@type": "/cosmos.upgrade.v1beta1.MsgSoftwareUpgrade",
+      "authority": "cosmos10d07y265gmmuvt4z0w9aw880jnsr700j6zn9kn",
+      "plan": {
+        "name": "v29.1.0",
+        "time": "0001-01-01T00:00:00Z",
+        "height": "33934700",
+        "info": "",
+        "upgraded_client_state": null
+      }
+    }
+  ],
+  "metadata": "ipfs://CID",
+  "deposit": "51000000uatom",
+  "title": "Gaia v29.1.0 upgrade",
+  "summary": "# Overview\r\n\r\nThis proposal schedules a coordinated upgrade of the Cosmos Hub to Gaia `v29.1.0`.\r\n\r\n**If the proposal passes, validators will be required to update the Cosmos Hub binary at the specified upgrade height.**\r\n\r\n**This upgrade is state-breaking.**\r\n\r\n## Highlights\r\n\r\n- Restore decoding of historical `ParameterChangeProposal` content, fixing governance proposal list, status-filtered, single-proposal and tally queries, as well as state export.\r\n- Update CosmWasm `wasmd` from `v0.60.9` to `v0.60.10`.\r\n- Update CosmWasm `wasmvm` from `v2.3.5` to `v2.3.6`.\r\n\r\n### State-Breaking Changes\r\n\r\n- Legacy `ParameterChangeProposal` submissions now decode and reach ante processing before governance rejects their execution. As a result, fees and account sequences change for such submissions.\r\n\r\n### Post-Upgrade Cleanup\r\n\r\n- After confirming that the upgraded node runs normally, node operators can remove the old Wasm cache directories:\r\n  - `\u003cnode home\u003e/wasm/cache/modules/3858fb5318-wasmer24`\r\n  - `\u003cnode home\u003e/data/08-light-client/cache/modules/3858fb5318-wasmer24`\r\n\r\n## Release Details\r\n\r\n- [Gaia v29.1.0 release](https://github.com/cosmos/gaia/releases#release-v29.1.0)\r\n- [Changelog](https://github.com/cosmos/gaia/blob/main/CHANGELOG.md)\r\n- [Upgrading guide](https://github.com/cosmos/gaia/blob/main/UPGRADING.md)\r\n\r\n# Upgrade Instructions and Verification\r\n\r\nPlease check the announcements in the established communication channels for release details and upgrade instructions.\r\n\r\nPublic verification keys and instructions for verifying Gaia release signatures are available in the [official Gaia release signing directory](https://github.com/cosmos/security/tree/main/release/gaia/signing).\r\n\r\n# Voting\r\n\r\nThis proposal has a voting period of **SEVEN DAYS**.\r\n\r\nThe following items summarize the voting options and what they mean for this proposal:\r\n\r\nYES - You agree that the Cosmos Hub should be updated with this release.\r\n\r\nNO - You disagree that the Cosmos Hub should be updated with this release.\r\n\r\nNO WITH VETO - A `NoWithVeto` vote indicates that the proposal either (1) is deemed to be spam, i.e., irrelevant to Cosmos Hub, (2) disproportionately infringes on minority interests, or (3) violates or encourages violation of the rules of engagement as currently set out by Cosmos Hub governance. Veto thresholds and any deposit burning are governed by the chain's active governance parameters.\r\n\r\nABSTAIN - You wish to contribute to the quorum but formally decline to vote either for or against the proposal.",
+  "expedited": false
+}
