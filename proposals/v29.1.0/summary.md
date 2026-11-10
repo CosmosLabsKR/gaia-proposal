@@ -19,8 +19,8 @@ This proposal schedules a coordinated upgrade of the Cosmos Hub to Gaia `v29.1.0
 ## Release Details
 
 - [Gaia v29.1.0 release](https://github.com/cosmos/gaia/releases#release-v29.1.0)
-- [Changelog](https://github.com/cosmos/gaia/blob/main/CHANGELOG.md)
-- [Upgrading guide](https://github.com/cosmos/gaia/blob/main/UPGRADING.md)
+- [Changelog](https://github.com/cosmos/gaia/blob/v29.1.0/CHANGELOG.md)
+- [Upgrading guide](https://github.com/cosmos/gaia/blob/v29.1.0/UPGRADING.md)
 
 # Upgrade Instructions and Verification
 
